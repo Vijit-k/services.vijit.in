@@ -86,7 +86,7 @@
     /* ═══════════════════════════════════════
        HERO
     ════════════════════════════════════════ */
-    .hero{
+    .hero{padding-top:200px !important;
       min-height:100vh;display:flex;align-items:center;
       position:relative;overflow:hidden;padding:120px 0 80px;
     }
@@ -256,17 +256,7 @@
       .footer-links{justify-content:center}
     }
   
-    /* ── LOGO CONTAINERS (white-bg logos on dark site) ── */
-    .nav-logo-box{
-      background:#fff;
-      border-radius:8px;
-      padding:5px 10px;
-      display:flex;
-      align-items:center;
-      box-shadow:0 2px 12px rgba(0,0,0,.25);
-    }
-    .nav-logo-box img{height:34px;width:auto;display:block}
-    .nav-logo img{height:auto;width:auto}  /* reset default so box controls it */
+    /* ── FOOTER LOGO BOX ── */
     .footer-logo-box{
       background:rgba(255,255,255,.08);
       border:1px solid rgba(255,255,255,.12);
@@ -277,19 +267,55 @@
     }
     .footer-logo-box img{height:36px;width:auto;display:block;filter:brightness(.92)}
 
+  
+    /* ── LOGO BANNER ── */
+    .logo-banner{
+      width:100%;
+      background:#fff;
+      border-bottom:2px solid rgba(184,146,42,.25);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:18px 2rem;
+      position:relative;
+      z-index:101;
+      box-shadow:0 4px 24px rgba(0,0,0,.18);
+    }
+    .logo-banner img{
+      height:72px;
+      width:auto;
+      display:block;
+      max-width:600px;
+    }
+    /* ── NAV WORDMARK (replaces logo in nav) ── */
+    .nav-wordmark{
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.4rem;
+      font-weight:600;
+      color:var(--gold-lt);
+      letter-spacing:.08em;
+    }
+    @media(max-width:600px){
+      .logo-banner img{height:50px}
+    }
+
   </style>
 </head>
 <body>
 
 <!-- ── NAV ── -->
+
+<!-- ── LOGO BANNER ── -->
+<div class="logo-banner">
+  <a href="https://vijit.in">
+    <img src="logo-full.png" alt="Vijitkumar Kunhikandi — Turning Support Chaos into Scalable Systems"/>
+  </a>
+</div>
+
 <nav id="nav">
   <div class="container">
     <div class="nav-inner">
-      <a href="https://vijit.in" class="nav-logo">
-        <div class="nav-logo-box">
-          <img src="logo-full.png" alt="Vijitkumar Kunhikandi"/>
-        </div>
-      </a>
+      <a href="https://vijit.in" class="nav-wordmark">VK</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#services">Services</a></li>
         <li><a href="#process">Process</a></li>
