@@ -255,6 +255,28 @@
       .footer-inner{flex-direction:column;text-align:center}
       .footer-links{justify-content:center}
     }
+  
+    /* ── LOGO CONTAINERS (white-bg logos on dark site) ── */
+    .nav-logo-box{
+      background:#fff;
+      border-radius:8px;
+      padding:5px 10px;
+      display:flex;
+      align-items:center;
+      box-shadow:0 2px 12px rgba(0,0,0,.25);
+    }
+    .nav-logo-box img{height:34px;width:auto;display:block}
+    .nav-logo img{height:auto;width:auto}  /* reset default so box controls it */
+    .footer-logo-box{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:10px;
+      padding:8px 14px;
+      display:inline-flex;
+      align-items:center;
+    }
+    .footer-logo-box img{height:36px;width:auto;display:block;filter:brightness(.92)}
+
   </style>
 </head>
 <body>
@@ -264,7 +286,9 @@
   <div class="container">
     <div class="nav-inner">
       <a href="https://vijit.in" class="nav-logo">
-        <img src="logo.png" alt="Vijitkumar Kunhikandi"/>
+        <div class="nav-logo-box">
+          <img src="logo-full.png" alt="Vijitkumar Kunhikandi"/>
+        </div>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#services">Services</a></li>
@@ -288,10 +312,7 @@
 
       <!-- LEFT -->
       <div class="reveal">
-        <div class="hero-logo">
-          <img src="logo-full.png" alt="Vijitkumar Kunhikandi — Turning Support Chaos into Scalable Systems"/>
-        </div>
-        <div class="hero-eyebrow">Available for consulting</div>
+<div class="hero-eyebrow">Available for consulting</div>
         <h1 class="hero-h1">
           Your support system<br/>
           is broken.<br/>
@@ -623,7 +644,9 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-logo">
-        <img src="Vijitkumar_Kunhikandi_logo.png" alt="Vijitkumar Kunhikandi"/>
+        <div class="footer-logo-box">
+          <img src="Vijitkumar_Kunhikandi_logo.png" alt="Vijitkumar Kunhikandi"/>
+        </div>
       </div>
       <div class="footer-links">
         <a href="https://vijit.in">Portfolio</a>
